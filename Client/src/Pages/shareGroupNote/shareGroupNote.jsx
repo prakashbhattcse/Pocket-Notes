@@ -6,9 +6,6 @@ import styles from "./shareGroupNote.module.css"
 import { GiPin } from "react-icons/gi";
 
 
-
-
-
 const ShareGroupNote = () => {
     const { groupId } = useParams();
     const [notes, setNotes] = useState([]);

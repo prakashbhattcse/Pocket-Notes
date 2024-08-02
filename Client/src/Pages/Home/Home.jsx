@@ -10,8 +10,8 @@ import home from "../../assets/body.png";
 
 
 const Home = () => {
-  const [groups, setGroups] = useState([]);
-  const [open, setOpen] = useState(false);
+  const [groups, setGroups] = useState([]);  //  store groups list
+  const [open, setOpen] = useState(false);  // group creation modal 
   const [shareModalOpen, setShareModalOpen] = useState(false);
   const [selectedGroupInfo, setSelectedGroupInfo] = useState({
     groupId: null,
@@ -97,8 +97,8 @@ const Home = () => {
   }, [openShareModal]);
 
   const shareLink = isSharingNote
-    ? `http://localhost:5173/share/note/${selectedGroupInfo.groupId}/${noteId}`
-    : `http://localhost:5173/share/group/${selectedGroupInfo.groupId}`;
+    ? `https://pocketnote013.netlify.app/share/note/${selectedGroupInfo.groupId}/${noteId}`
+    : `https://pocketnote013.netlify.app/share/group/${selectedGroupInfo.groupId}`;
 
   const handleSearchChange = (e) => {
     setSearchQuery(e.target.value);

@@ -115,7 +115,7 @@ const Notes = ({ groupId, groupName, initials, notesData = [], setNotesData, col
 
       {isModalOpen && selectedNote && (
         <ShareModal
-          link={`http://localhost:5173/share/note/${selectedNote._id}`}
+          link={`https://pocketnote013.netlify.app/share/note/${selectedNote._id}`}
           closeModal={handleCloseModal}
           type="note"
         />
