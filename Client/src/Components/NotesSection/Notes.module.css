@@ -1,0 +1,204 @@
+.notesSection {
+    width: 100%;
+    height: 100vh;
+  }
+  
+  .noteTopsBar {
+    height: 10vh;
+
+    background-color: var(--darkblue);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.1rem 3rem;
+    justify-content: space-between;
+  
+    h1 {
+      color: var(--white);
+    }
+  }
+
+  .spaceBtwn{
+    display: flex;
+justify-content: space-between;
+gap: 1rem;
+  }
+  
+  .searchBarTab {
+    width: 40%;
+    border: 2px solid var(--white);
+    background-color: var(--white);
+    margin: 2rem 0;
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+    border-radius: 15px;
+    /* margin: 0 auto; */
+  
+    input {
+      width: 80%;
+      outline: none;
+      border: none;
+      padding: 2px 12px;
+      background-color: transparent;
+      color: var(--black);
+      font-size: 1.1rem;
+    }
+  
+    .searchIcon {
+      font-size: 1.5rem;
+      width: 20%;
+      color: black;
+    }
+  }
+  
+  .initials {
+    border: none;
+    color: white;
+    border-radius: 50%;
+    height: 2rem;
+    width: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+    padding: 1.4rem;
+    font-weight: 700;
+    font-size: 1.1rem;
+  }
+
+  .notesData {
+    height: 70vh;
+    width: 100%;
+    padding: 1.2rem;
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+    overflow-y: scroll;
+  }
+  
+  .note {
+    background-color: var(--white);
+    padding: 1.4rem 1.8rem;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 3rem;
+  
+    p {
+      margin: 0;
+      font-size: 0.9rem;
+    }
+  }
+  
+  .noteDateTime {
+    text-align: right;
+  }
+  
+  .inputSection {
+    width: 100%;
+    height: 20vh;
+    padding: 1rem;
+    background-color: var(--darkblue);
+    display: flex;
+    align-items: end;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+    input {
+      width: 100%;
+      height: 100%;
+      border-radius: 7px;
+      border: none;
+      outline: none;
+      vertical-align: top;
+      position: relative;
+      font-size: 1rem;
+    }
+  
+    .sentButton {
+      position: absolute;
+      right: 3rem;
+      background-color: transparent;
+      border: none;
+      font-size: 2rem;
+      color: var(--darkblue);
+    }
+  
+    .sentButton:disabled {
+      color: #ccc;
+      cursor: not-allowed;
+      opacity: 0.6;
+    }
+  }
+  
+  /* Responsive styles */
+  @media only screen and (max-width: 600px) {
+    .noteTopsBar {
+      flex-direction: row;
+      align-items: center;
+      /* justify-content: center; */
+      gap: 0;
+      padding: 0.5rem 1rem;
+
+    }
+  
+    .searchBarTab {
+        width: 60%;
+        border: 2px solid var(--white);
+        margin:  0;
+        display: flex;
+        align-items: center;
+        padding: 10px 0;
+        border-radius: 15px;
+        /* margin: 0 auto; */
+      
+        input {
+          width: 80%;
+          outline: none;
+          border: none;
+          padding: 2px 12px;
+          background-color: transparent;
+          color: var(--white);
+          font-size: 1.1rem;
+        }
+      
+        .searchIcon {
+          font-size: 1.5rem;
+          width: 20%;
+          color: white;
+        }
+      }
+    .notesData {
+      padding: 0.5rem;
+      gap: 0.5rem;
+    }
+  
+
+    .note {
+      padding: 1rem;
+      gap: 1rem;
+  
+      p {
+        font-size: 0.8rem;
+      }
+    }
+  
+    .inputSection {
+      height: 15vh;
+      padding: 0.5rem;
+  
+      input {
+        font-size: 0.8rem;
+      }
+  
+      .sentButton {
+        font-size: 1.5rem;
+        right: 1rem;
+      }
+    }
+  }
+  

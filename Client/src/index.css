@@ -1,0 +1,395 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* font-family: "Roboto", sans-serif; */
+  font-family: "Poppins", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --lightblue: #dae5f5;
+  --black: #000000;
+  --white: #ffffff;
+  --darkblue: #16008b;
+
+}
+
+button{
+  cursor: pointer;
+}
+
+.mainHeading {
+  font-size: 50px;
+  font-weight: 700;
+}
+
+.heading {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.subHeading {
+  font-size: 20px;
+}
+
+.Section {
+  width: 100vw;
+  min-height: 100vh;
+  position: relative;
+}
+
+.modalPosition {
+  position: absolute;
+  display: block;
+  left: 230%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.tabSection {
+  width: 25%;
+  height: 100vh;
+  background-color: var(--white);
+  display: flex;
+  /* justify-content: center; */
+  position: relative;
+  padding: 2rem 0;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title {
+  text-align: center;
+}
+
+.plusBtn {
+  position: absolute;
+  width: 3rem;
+  height: 3rem;
+  font-size: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background-color: var(--darkblue);
+  color: var(--white);
+  border-radius: 50%;
+  bottom: 2rem;
+  right: 2rem;
+  cursor: pointer;
+}
+
+.searchBarTab{
+  width: 90%;
+border: 2px solid var(--black);
+margin: 2rem 0;
+display: flex;
+align-items: center;
+padding: 10px 0;
+border-radius: 15px;
+
+  input{
+    width: 80%;
+    outline: none;
+    border: none;
+    padding: 2px 12px;
+  }
+
+  .searchIcon{
+    font-size: 1.5rem;
+    width: 20%;
+  }
+}
+
+.tabDataOutline {
+  background-color: var(--lightblue);
+  width: 75%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.tabDataSection {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+
+  img {
+    width: 100%;
+  }
+}
+
+.flexbetween {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* MODAL START */
+
+
+.modalOutline {
+  width: 30rem;
+  min-height: 17rem;
+  background-color: var(--white);
+  padding: 1rem 2rem;
+  box-sizing: border-box;
+  z-index: 30;
+  opacity: 1;
+  position: relative;
+border-radius: 18px;
+
+  input {
+    padding: 8px 8px;
+    width: 60%;
+    border-radius: 0.7rem;
+    border: 1px solid rgb(166, 166, 166);
+    outline: none;
+  }
+.cross{
+  position: absolute;
+  top: 1rem;
+  right: 2rem;
+  font-weight: 700;
+  font-size: 1.6rem;
+  cursor: pointer;
+}
+
+  button {
+    padding: 5px 14px;
+    border: none;
+    border-radius: 11px;
+    float: right;
+    background-color: var(--darkblue);
+    color: white;
+    font-size: 1rem;
+    padding: 10px 20px;
+    padding-top: 5px;
+  }
+}
+
+.dataCards {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 1rem;
+  overflow-y: auto; 
+  scrollbar-width: thin;
+  max-height: 100vh; 
+  box-sizing: border-box;
+}
+
+
+.dataCards::-webkit-scrollbar {
+  width: 119px;
+}
+
+.dataCards::-webkit-scrollbar-track {
+  background: #5b5858;
+}
+
+.dataCards::-webkit-scrollbar-thumb {
+  background-color: white;
+  border: 1px #d9d9d9 solid;
+  border-radius: 15px;
+}
+
+.dataCard {
+  /* background-color: var(--white); */
+  width: 100%;
+  /* box-sizing: border-box; */
+  padding: 0.7rem 0.7rem;
+  font-size: 1.2rem;
+  text-transform: capitalize;
+  cursor: pointer;
+}
+
+/* .dataCard:hover {
+  background-color: rgb(205, 205, 205);
+} */
+
+.dataTabWrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 95%;
+  padding: 0.5rem 1rem;
+}
+
+.dataTabWrap.active {
+  background-color: rgb(236 236 236);
+  border-radius: 25px;
+}
+
+.dataTabWrap:hover,
+.dataTabWrap:hover .dataCard {
+  background-color: rgb(236 236 236);
+  border-radius: 25px;
+}
+
+.initials {
+  border: none;
+  /* background-color: rgb(230, 77, 77); */
+  color: white;
+  border-radius: 50%;
+  height: 2rem;
+  width: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  padding: 1.4rem;
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.btnGroup {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  width: 60%;
+  button {
+    border-radius: 50%;
+    width: 1rem;
+    padding: 0.7rem;
+    cursor: pointer;
+  }
+}
+
+/* MODAL END */
+
+/* NOTES START */
+
+@media only screen and (max-width: 600px) {
+  .tabSection {
+    display: block;
+    width: 100%;
+  }
+  .tabDataOutline {
+    display: none;
+    width: 100%;
+  }
+
+
+
+  .modalOutline {
+    width: 22rem;
+    height: 13rem;
+    background-color: var(--white);
+    padding: 1rem 2rem;
+    box-sizing: border-box;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+
+    input {
+      padding: 8px 8px;
+      width: 60%;
+      border-radius: 0.7rem;
+      border: 1px solid rgb(166, 166, 166);
+      outline: none;
+    }
+
+    h3 {
+      font-size: 1rem;
+    }
+
+    button {
+      padding: 5px 14px;
+      border: none;
+      border-radius: 11px;
+      float: right;
+      background-color: var(--darkblue);
+      color: white;
+    }
+  }
+
+  .btnGroup {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    width: 60%;
+    button {
+      border-radius: 50%;
+
+      padding: 0.7rem;
+      cursor: pointer;
+    }
+  }
+}
+
+/* Hide sidebar and show .tabDataOutline section when .mobile-nav-visible class is not present */
+@media only screen and (max-width: 600px) {
+  .Section:not(.mobile-nav-visible) .tabSection {
+    display: none;
+  }
+  .Section:not(.mobile-nav-visible) .tabDataOutline {
+    display: block;
+  }
+
+  .searchBarTab{
+    width: 90%;
+ margin: 1.5rem auto;
+  
+    input{
+      width: 80%;
+      outline: none;
+      border: none;
+      padding: 2px 12px;
+    }
+  
+    .searchIcon{
+      font-size: 1.5rem;
+      width: 20%;
+    }
+  }
+
+
+}
+
+.modalOverlay {
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+  z-index: 20;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+
+  top: 0;
+  left: 0;
+
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modalContent {
+  width: 24rem;
+  background: white;
+  padding: 2rem;
+  opacity: 1;
+  display: flex;
+  border-radius: 1rem;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+}
+
+.closeButton {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+

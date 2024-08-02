@@ -1,0 +1,39 @@
+ body{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*
+:root{
+  --lightblue: #DAE5F5;
+  --black:#000000;
+  --white: #FFFFFF;
+  --darkblue:#16008B;
+}
+
+.section{
+  width: 100vw;
+  min-height:100vh ;
+}
+
+.tabSection{
+  width: 30%;
+  height: 100vh;
+  background-color: var(--white);
+}
+
+.tabDataSection{
+  background-color: var(--lightblue);
+  width: 70%;
+  height: 100vh;
+}
+
+.flexbetween{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+} */
+
+
+

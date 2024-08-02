@@ -1,0 +1,35 @@
+.shareNoteView {
+  width: 100%;
+  height: 100vh;
+  background-color: whitesmoke;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.sharedNoteViewSection {
+  min-width: 23rem;
+  max-width: 90%;
+  min-height: 8rem;
+  background-color: transparent;
+  border-radius: 20px;
+  padding: 2rem;
+  border: 1px solid rgb(42, 42, 42);
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+
+#pin{
+    font-size: 2.2rem;
+    transform: rotate(270deg);
+    color: rgb(255, 170, 0); 
+
+}
+
+.note{
+    padding: 1rem;
+    background-color: white;
+    border-radius: 15px;
+    min-width:19rem;
+    text-transform: capitalize;
+}
